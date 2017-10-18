@@ -1,0 +1,3 @@
+execute 'create_dir' do
+	command 'sudo mkdir /home/dbeers/new_dir'
+end

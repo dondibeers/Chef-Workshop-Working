@@ -1,0 +1,74 @@
+do these projects:
+https://github.com/chef-training/workshops/tree/master/Install_MongoDB
+
+https://github.com/chef-training/workshops/tree/master/Awesome_Appliance_Repair
+------------------------------------------------------------------------------------------------------------------
+
+
+•Install host for Chef DK and workstation - Ubuntu 16.04 - ubuntu-16.04.2-desktop-amd64.iso used
+•Update – sudo apt-get update
+•Create folder for chefdk bits 
+•	Download chefdk – wget https://packages.chef.io/files/stable/chefdk/2.3.4/ubuntu/16.04/chefdk_2.3.4-1_amd64.deb
+•	Install chefdk: sudo dpkg –i <path_to_.deb_file>
+•	Verify installation – sudo chef verify
+1.	Set ruby path to ruby in chefdk: echo 'eval "$(chef shell-init bash)"' >> ~/.bash_profile
+•	Logout/ log back in
+Which ruby (Should return: /opt/chefdk/embedded/bin/ruby
+Set up the chef-repo
+Starter Kit¶
+If you have access to Chef server (hosted or on premises), you can download the starter kit. The starter kit will create the necessary configuration files: the .chef ``directory, ``knife.rb, ORGANIZATION-validator.pem, and USER.pem. Simply download the starter kit and then move it to the desired location on your workstation.
+
+
+https://manage.chef.io/login   download from here
+
+unzip starter kit in home directory
+
+set path:
+echo 'export PATH="/opt/chefdk/embedded/bin:$PATH"' >> ~/.bash_profile && source ~/.bash_profile
+
+
+knife ssl fetch
+
+
+
+
+Connect local git to githup repository
+•	Install git: apt-get install git
+•	Initialize target directory as a git repository – cd to target directory; git init
+•	Add files in new local repository: git add .
+•	Commit files staged in local repo: git commit –m “initial commit”ping 192.168.190
+•	Copy url of target remote gitthb repo: https://github.com/dondibeers/Chef-Workshop.git
+git remote add origin https://github.com/dondibeers/Chef-Workshop 
+
+•	git remote –v
+•	push changes: git push origin master
+•	git commit –m “message” –all  ( to commit new changes)
+•	git push origin master
+
+	
+ 
+
+
+
+https://docs.chef.io/install_dk.html
+
+https://downloads.chef.io/chefdk
+
+https://devopshomelab.wordpress.com/2014/11/04/setting-up-a-chef-workstation-with-chefdk/
+
+
+------------------------------------------------------------------
+Chef server hosted:
+
+https://manage.chef.io/login
+https://api.chef.io/login
+
+dondibeers
+---------------------------------------------------------------------
+Uninstall msyql-server:
+
+apt-get remove -y mysql-*
+sudo apt autoremove
+apt-get purge -y mysql-*
+
+
